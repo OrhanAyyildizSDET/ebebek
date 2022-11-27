@@ -10,6 +10,8 @@
 
 -I used javascript executior and wait class in my test cases
 
+-I used configurations.properties file for base_url etc... and fro use it ı create configReader class
+
 -I find bugs and ı used jira to report them
 
 -I used postman and jira for manual testing
