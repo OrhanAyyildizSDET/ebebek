@@ -1,5 +1,3 @@
-package stepDefs;
-
 import org.apache.commons.collections4.Get;
 import org.junit.Assert;
 import org.junit.Test;
@@ -27,6 +25,10 @@ public class EbebekTestNG {
     @Test
     public void testEbebek() throws InterruptedException {
         Driver.getDriver().get(ConfigReader.getProperty("site_url"));
+
+        wait.until(ExpectedConditions.visibilityOf(ebebek_main.closeButtonForAdvices));
+        ebebek_main.closeButtonForAdvices.click();
+
         ebebek_main.searchBox.sendKeys("kaşık maması");
         ebebek_main.searchBox.sendKeys(Keys.ENTER);
         wait.until(ExpectedConditions.visibilityOf(ebebek_main.products1));

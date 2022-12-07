@@ -10,6 +10,8 @@ public class Ebebek_main {
         PageFactory.initElements(Driver.getDriver(), this);
     }
 
+    @FindBy(css = "[class = 'ins-close-button-container-c2703']")
+    public WebElement closeButtonForAdvices;
     @FindBy(css = "[class = 'EbebekSiteLoginMenu has-components']")
     public WebElement account;
     @FindBy(css = "[class = 'orangeBackground']")

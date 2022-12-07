@@ -30,7 +30,8 @@ public class EbebekStepDefs {
     }
     @When("user click the searchbox")
     public void user_click_the_searchbox() {
-
+        wait.until(ExpectedConditions.visibilityOf(ebebek_main.closeButtonForAdvices));
+        ebebek_main.closeButtonForAdvices.click();
     }
     @When("user enter the word {string} and click enter")
     public void user_enter_the_word_and_click_enter(String string) {
