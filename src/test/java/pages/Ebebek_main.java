@@ -20,6 +20,6 @@ public class Ebebek_main {
     public WebElement searchBox;
     @FindBy(xpath = "//eb-product-list-item[1]")
     public WebElement products1;
-    @FindBy(css = "[href = '/oioi-mama-kasigi-2li-aqua-green--mellow-yellow-p-oioi-1060016']")
+    @FindBy(css = "[href = '/mycey-360-derece-donen-bebek-mama-kasigi-p-myc-m06201-203']")
     public WebElement lastProduct;
 }

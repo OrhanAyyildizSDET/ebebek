@@ -54,13 +54,28 @@ public class EbebekTestNG {
         js.executeScript("arguments[0].click();",ebebek_main.lastProduct);
 
         String productNameExpected = ebebek_shopping.getProductName.getText();
-
-        js.executeScript("arguments[0].click();",ebebek_shopping.addToCart);
-        wait.until(ExpectedConditions.elementToBeClickable(ebebek_shopping.showCart));
-        js.executeScript("arguments[0].click();",ebebek_shopping.showCart);
+        try {
+            if (ebebek_shopping.addToCartList.size() > 0) {
+                js.executeScript("arguments[0].click();",ebebek_shopping.addToCart);
+                wait.until(ExpectedConditions.elementToBeClickable(ebebek_shopping.showCart));
+                js.executeScript("arguments[0].click();",ebebek_shopping.showCart);
+            }
+            else {
+                js.executeScript("arguments[0].click();",ebebek_shopping.geldiğindeHaberVer);
+            }
+        }catch (Exception e){
+            e.printStackTrace();
+        }
         Assert.assertEquals(productNameExpected, ebebek_shopping.shoppingItemName.getText());
+        try {
+            if (ebebek_shopping.completeShoppingList.size()>0){
+                Thread.sleep(1000);
+                js.executeScript("arguments[0].click();",ebebek_shopping.completeShopping);
+            }
+        }catch (Exception e){
+            System.out.println(e.getMessage());
+        }
 
-        js.executeScript("arguments[0].click();",ebebek_shopping.completeShopping);
         wait.until(ExpectedConditions.elementToBeClickable(ebebek_shopping.loginOrRegister));
         Assert.assertTrue(ebebek_shopping.loginOrRegister.isDisplayed());
 

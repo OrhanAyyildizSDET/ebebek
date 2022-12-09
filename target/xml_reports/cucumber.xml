@@ -1,6 +1,6 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="30.083">
-    <testcase classname="ebebek features" name="ebebek scenario" time="29.903">
+<testsuite errors="0" failures="0" name="io.cucumber.core.plugin.JUnitFormatter" skipped="0" tests="1" time="24.244">
+    <testcase classname="ebebek features" name="ebebek scenario" time="23.921">
         <system-out><![CDATA[Given user go to the "https://www.e-bebek.com" page.........................passed
 When user click the searchbox...............................................passed
 And user enter the word "biberon" and click enter...........................passed
